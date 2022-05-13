@@ -1,0 +1,35 @@
+.Form {
+    position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 16px);
+    background-color: brown;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 1000;
+    /* height: 248px; */
+}
+.FormBox {
+    /* margin: 0 auto; */
+    padding: 8px;
+    border-bottom: 1px solid black;
+    /* height: calc(100% / 4); */
+}
+
+.Form input {
+    border-radius: 4px;
+    font-size: 22px;
+    width: calc(100% - .8rem);
+    display: block;
+    margin: 8px 0;
+}
+
+.Form h4 {
+    font-size: 24px;
+}
+
+/* .Form label {
+    width: 100%;
+    display: block;
+} */

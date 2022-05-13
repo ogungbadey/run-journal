@@ -1,0 +1,25 @@
+.RaceCard {
+    /* margin: auto 0; */
+    width: calc((100% / 2) - 8px);
+    border-radius: 4px;
+    /* border: 2px solid #252324; */
+    font-size: 12px;
+    /* padding: 8px; */
+}
+
+.RaceDate {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #252324;
+}
+
+.RaceDetails {
+    height: 85%;
+    /* padding: 8px; */
+}
+
+.RaceDetails h4 {
+    margin: 4px 0;
+}

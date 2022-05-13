@@ -1,0 +1,52 @@
+/* .Content {
+    padding: 8px;
+    height: 100%;
+    position: relative;
+} */
+
+.Header {
+    height: 10%;
+    border-bottom: 2px solid black;
+}
+
+.Main {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Main h4 {
+    margin-bottom: 8px;
+}
+
+/* .Action {
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+    height: 40px;
+} */
+
+.Action {
+    height: 15%;
+}
+
+.Action button {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    outline: none;
+    border: 0;
+    background-color: #252324;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.Action button:hover {
+    background-color: greenyellow;
+    color: #252324;
+}

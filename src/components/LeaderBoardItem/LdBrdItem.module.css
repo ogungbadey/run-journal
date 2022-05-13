@@ -1,0 +1,11 @@
+.Item:nth-child(even){
+    background-color: #fff;
+}
+
+.Item:nth-of-type(1) span {
+    color: greenyellow;
+}
+
+.Item span {
+    font-weight: 600;
+}

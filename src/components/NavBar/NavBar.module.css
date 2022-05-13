@@ -1,0 +1,22 @@
+.NavBar {
+    height: 64px;
+    background-color: #252324;
+    margin-bottom: 32px;
+    color: #FFF;
+    /* font-size: large; */
+    /* font-weight: ; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavItems {
+    /* margin: auto; */
+    display: flex;
+    width: calc(100% - 24px);
+    height: 70%;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: space-between;
+}
