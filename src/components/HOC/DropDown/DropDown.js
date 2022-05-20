@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function DropDown({visible, close,children}) {
-    console.log(visible);
+export default function DropDown({ visible=true, close,children}) {
   return (
     visible && <div style={{
         position: "absolute",
@@ -9,7 +8,7 @@ export default function DropDown({visible, close,children}) {
         left: "0",
         height: "100%",
         width: "100%",
-        backgroundColor: "#ccc",
+        backgroundColor: "rgba(0,0,0,0.9)",
         opacity: ".95",
         zIndex: "1000"
     }} onClick={close}>{children}</div>

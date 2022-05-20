@@ -1,6 +1,6 @@
 .NavBar {
     height: 64px;
-    background-color: #252324;
+    background-color: var(--primary);
     margin-bottom: 32px;
     color: #FFF;
     /* font-size: large; */
@@ -19,4 +19,12 @@
     /* background-color: blue; */
     align-items: center;
     justify-content: space-between;
+}
+
+.NavItems h2 {
+    color: var(--tertiary);
+}
+
+.NavItems div:last-child > * {
+    margin-left: 8px;
 }

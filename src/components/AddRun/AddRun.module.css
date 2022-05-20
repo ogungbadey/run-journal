@@ -1,0 +1,21 @@
+.Btn {
+    position: fixed;
+        border-radius: 50%;
+        bottom: 64px;
+        right: 24px;
+        height: 64px;
+        width: 64px;
+        background-color: var(--tertiary);
+        text-align:center;
+        opacity: .85;
+        font-size:40px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border: 0;
+        /* color: white; */
+}
+
+.Btn a {
+    color: rgb(255, 255, 255);
+}

@@ -1,9 +1,13 @@
 .Item:nth-child(even){
-    background-color: #fff;
+    background-color: var(--primary);
+}
+
+.Item {
+    color: var(--secondary);
 }
 
 .Item:nth-of-type(1) span {
-    color: greenyellow;
+    color: var(--tertiary);
 }
 
 .Item span {

@@ -15,14 +15,14 @@ export  const runData = [
           ? "0" + new Date().getMonth()
           : new Date().getMonth()) + "-" + new Date().getFullYear(),
     },
-    {
-      distance: 10,
-      pace: "5.55",
-      date:
-        new Date().getDate() + "-" + (new Date().getMonth() < 10
-          ? "0" + new Date().getMonth()
-          : new Date().getMonth()) + "-" + new Date().getFullYear(),
-    },
+    // {
+    //   distance: 10,
+    //   pace: "5.55",
+    //   date:
+    //     new Date().getDate() + "-" + (new Date().getMonth() < 10
+    //       ? "0" + new Date().getMonth()
+    //       : new Date().getMonth()) + "-" + new Date().getFullYear(),
+    // },
   ];
 
   export const userStats = {

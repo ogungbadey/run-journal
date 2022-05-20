@@ -1,35 +1,64 @@
 .Form {
     position: absolute;
-    border-radius: 4px;
     top: 50%;
     left: 50%;
-    width: calc(100% - 16px);
-    background-color: brown;
     transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background-color: #fff;
     margin: 0 auto;
-    z-index: 1000;
-    /* height: 248px; */
-}
-.FormBox {
-    /* margin: 0 auto; */
-    padding: 8px;
-    border-bottom: 1px solid black;
-    /* height: calc(100% / 4); */
+    padding: 16px;
+    width: calc(100% - 24px);
+    max-width: 480px;
 }
 
-.Form input {
+
+.FormBox {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.FormBox:first-child {
+    margin-bottom: 16px;
+}
+
+.FormBox input {
     border-radius: 4px;
-    font-size: 22px;
-    width: calc(100% - .8rem);
+    font-size: 18px;
+    width: inherit;
     display: block;
     margin: 8px 0;
+    height: 40px;
+    padding: 4px;
+    outline: none;
+    cursor: pointer;
 }
 
-.Form h4 {
-    font-size: 24px;
+.FormBox input:hover {
+    border: 2px solid var(--tertiary);
+}
+
+input[type="submit"] {
+    border: 0;
+    background-color: var(--tertiary);
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary);
+    color: black;
+}
+
+.Form h3 {
+    font-size: 32px;
+    color: var(--tertiary);
+    font-weight: 700;
 }
 
 /* .Form label {
     width: 100%;
     display: block;
 } */
+
+@media screen {
+    
+}

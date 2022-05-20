@@ -7,19 +7,33 @@
     /* padding: 8px; */
 }
 
-.RaceDate {
+.Header {
     height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #252324;
+    /* border-bottom: 1px solid #252324; */
+    /* color: var(--tertiary); */
 }
 
-.RaceDetails {
-    height: 85%;
+.Main {
+    height: 75%;
     /* padding: 8px; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-.RaceDetails h4 {
+.Main h4 {
     margin: 4px 0;
+}
+
+.Footer {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.Footer span {
+    display: block;
+    font-size: 20px;
 }

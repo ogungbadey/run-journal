@@ -4,32 +4,39 @@ import DropDown from "../components/HOC/DropDown/DropDown";
 import LdBrdItem from "../components/LeaderBoardItem/LdBrdItem";
 import RaceCard from "../components/RaceCard/RaceCard";
 import StatCard from "../components/StatCard/StatCard";
-import { leaderBoard, runData, userStats } from "../fakeData";
+import { leaderBoard, userStats } from "../fakeData";
 
 export default function Home() {
+  const runs = JSON.parse(localStorage.getItem("run-info"));
+
   const [showDrop, setshowDrop] = useState(false);
   const closeDrop = () => setshowDrop(false);
   const marginStyle = {
-    margin: "8px 0",
+    margin: "24px 0",
   };
 
   const sectionStyle = {
-      margin: "16px 0"
-  }
+    margin: "16px 0",
+  };
   return (
     <Fragment>
+      <div style={{textAlign:"center"}}>
+        <h3 className="secondary mb-8">
+          Welcome to your <em className="tertiary">run journal</em>!
+        </h3>
+        <h3 className="secondary mb-8">
+          Your runs are <em className="tertiary">recorded</em> and <em className="tertiary">analysed</em> to
+          help you keep track of your progress.{" "}
+        </h3>
+        <h3></h3>
+      </div>
       <StatCard stats={userStats} />
-
-      {/* <div>
-      <h3 style={marginStyle}>Add run to journal</h3>
-      <button onClick={() => setshowDrop(true)}>Add</button>
-    </div> */}
       <DropDown visible={showDrop} close={closeDrop} children={<Form />} />
       {/* <DropDown/> */}
       <div>
         <div style={sectionStyle}>
           <div style={marginStyle}>
-            <h3>Recent Runs</h3>
+            <h3 className="secondary">Recent Runs</h3>
           </div>
           <div
             style={{
@@ -38,18 +45,26 @@ export default function Home() {
               width: "100%",
             }}
           >
-            {runData.map((race, i) => (
-              <RaceCard key={i} data={race} />
+            {runs.slice(-2).map((run, i) => (
+              <RaceCard key={i} data={run} />
             ))}
           </div>
         </div>
         <div style={sectionStyle}>
+          <div style={marginStyle}>
+            <h3 className="secondary">LeaderBoard</h3>
             <div>
-                <h3>LeaderBoard</h3>
-                <div >
-                    {leaderBoard.map(({name, pace, distance}, i) => <LdBrdItem key={i} position={i+1} name={name} pace={pace} distance={distance}/>)}
-                </div>
+              {leaderBoard.map(({ name, pace, distance }, i) => (
+                <LdBrdItem
+                  key={i}
+                  position={i + 1}
+                  name={name}
+                  pace={pace}
+                  distance={distance}
+                />
+              ))}
             </div>
+          </div>
         </div>
       </div>
     </Fragment>

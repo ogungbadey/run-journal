@@ -1,11 +1,15 @@
 .App {
   /* padding: 0 16px; */
   min-height: 100vh;
-  background-color: aliceblue;
+  /* background-color: #e9eff4; */
   /* margin: 0 auto; */
   box-sizing: border-box;
+  /* position: relative; */
 }
 
+*{
+  box-sizing: border-box;
+}
 .App p{
   margin: 0;
   padding: 0;
@@ -22,4 +26,16 @@
 
 .App-wrapper > div {
   margin-bottom: 24px;
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.tertiary {
+  color: var(--tertiary);
+}
+
+.mb-8 {
+  margin-bottom: 8px;
 }
