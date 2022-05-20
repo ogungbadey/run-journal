@@ -44,8 +44,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: var(--secondary);
+    background-color: var(--alternate);
     color: black;
+    border: 0
 }
 
 .Form h3 {

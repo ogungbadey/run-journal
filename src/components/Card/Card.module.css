@@ -3,4 +3,5 @@
     background-color: var(--primary);
     color: var(--secondary);
     max-width: 480px;
+    position: relative;
 }

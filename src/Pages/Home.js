@@ -7,7 +7,7 @@ import StatCard from "../components/StatCard/StatCard";
 import { leaderBoard, userStats } from "../fakeData";
 
 export default function Home() {
-  const runs = JSON.parse(localStorage.getItem("run-info"));
+  const runs = JSON.parse(localStorage.getItem("run-info")) || [];
 
   const [showDrop, setshowDrop] = useState(false);
   const closeDrop = () => setshowDrop(false);
@@ -28,7 +28,6 @@ export default function Home() {
           Your runs are <em className="tertiary">recorded</em> and <em className="tertiary">analysed</em> to
           help you keep track of your progress.{" "}
         </h3>
-        <h3></h3>
       </div>
       <StatCard stats={userStats} />
       <DropDown visible={showDrop} close={closeDrop} children={<Form />} />
@@ -38,7 +37,7 @@ export default function Home() {
           <div style={marginStyle}>
             <h3 className="secondary">Recent Runs</h3>
           </div>
-          <div
+          {runs.length > 0 ? <div
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -48,7 +47,7 @@ export default function Home() {
             {runs.slice(-2).map((run, i) => (
               <RaceCard key={i} data={run} />
             ))}
-          </div>
+          </div> : <p>No runs added yet</p>}
         </div>
         <div style={sectionStyle}>
           <div style={marginStyle}>

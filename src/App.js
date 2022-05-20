@@ -34,7 +34,7 @@ function App() {
         <NavBar />
         <div className="App-wrapper">
           <Routes location={state?.backgroundLocation || location}>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/" exact element={<RequireAuth><Home/></RequireAuth>} />
             <Route path="/login" element={<Login />} />
             <Route
               path="/new-run"
